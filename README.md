@@ -103,6 +103,27 @@ After that, you will need to recompile your project with `react-native run-andro
 
 ![android install](https://github.com/AlexanderZaytsev/react-native-i18n/blob/master/docs/android-install.png?raw=true)
 
+### Windows
+Add RNI18n as an existing project to your React Native project in Visual Studio.
+Add `new RNI18nPackage(),` in `MainPage.cs` and do't forget to add the namespace `using RNI18n;`
+```
+public override List<IReactPackage> Packages
+        {
+            get
+            {
+                return new List<IReactPackage>
+                {
+                    new MainReactPackage(),
+                    new RNI18nPackage(),
+                };
+            }
+        }
+```
+Make sure the RNI18n project is referenced in your React Native project:
+* Go to Visual Studio
+* Right click your project > Add > Reference
+* Choose tab Projects and select the RNI18n project
+
 ## Usage
 
 ```javascript
